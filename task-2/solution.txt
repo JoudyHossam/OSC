@@ -1,0 +1,19 @@
+git config --global user.name "Joudy"
+git config --global user.email "joudyhossam051@gmail.com"
+cd ~
+git clone https://github.com/JoudyHossam/OSC.git
+cd OSC
+mkdir task-2
+cd task-2
+echo "Hello world" > greeting.txt
+git add greeting.txt
+git commit -m "Added greeting"
+git checkout -b intro
+echo "I love Git" >>greeting.txt
+git add greeting.txt
+git commit -m "Added I love Git"
+git checkout main
+git merge intro
+git tag v1
+git push origin main
+git push origin v1
